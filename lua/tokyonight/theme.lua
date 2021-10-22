@@ -252,7 +252,7 @@ function M.setup(config)
 
     TSTag               = { fg = c.custom.gray.dark, style = "bold" };    -- Tags like html tag names.
     TSTagDelimiter      = { fg = c.custom.gray.very_dark };    -- Tag delimiter like `<` `>` `/`
-    TSTagAttribute      = { fg = c.custom.purple.light };    -- Tag delimiter like `<` `>` `/`
+    TSTagAttribute      = { fg = c.custom.purple.dark };    -- Tag delimiter like `<` `>` `/`
     -- TSText              = { };    -- For strings considered text in a markup language.
     TSTextReference = { fg = c.teal },
     -- TSEmphasis          = { };    -- For text to be represented with emphasis.
