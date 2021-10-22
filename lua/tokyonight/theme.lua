@@ -228,15 +228,15 @@ function M.setup(config)
     TSKeyword              = { fg = c.custom.purple.dark, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
     TSKeywordFunction      = { fg = c.custom.functions, style = config.functionStyle }, -- For keywords used to define a fuction.
     TSLabel                = { fg = c.custom.gray.dark }, -- For labels: `label:` in C and `:label:` in Lua.
-    -- TSMethod            = { };    -- For method calls and definitions.
     TSNamespace            = { fg = c.custom.gray.dark };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
     TSOperator             = { fg = c.custom.gray.dark }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter            = { fg = c.custom.yellow.light }, -- For parameters of a function.
     TSParameterReference   = { fg = "#ff0000" };    -- For references to parameters of a function.
-    TSField                = { fg = c.custom.blue.light }, -- For fields 
-    TSProperty             = { fg = c.custom.blue.light }, -- Same as `TSField`.
+    TSField                = { fg = c.custom.blue.light }, -- For fields
+    TSProperty             = { fg = c.custom.yellow.light }, -- Same as `TSField`.
+    TSMethod               = { fg = c.custom.blue.light };    -- For method calls and definitions.
     TSPunctDelimiter       = { fg = c.custom.gray.very_dark }, -- For delimiters ie: `.`
     TSPunctBracket         = { fg = c.custom.gray.dark }, -- For brackets and parens.
     TSPunctSpecial         = { fg = c.custom.red.dark }, -- For special punctutation that does not fall in the catagories before.
