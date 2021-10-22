@@ -337,9 +337,9 @@ function M.setup(config)
     DashboardFooter = { fg = c.yellow, style = "italic" },
 
     -- WhichKey
-    WhichKey = { fg = c.cyan },
-    WhichKeyGroup = { fg = c.blue },
-    WhichKeyDesc = { fg = c.magenta },
+    WhichKey = { fg = c.custom.gray.light },
+    WhichKeyGroup = { fg = c.custom.purple.dark },
+    WhichKeyDesc = { fg = c.custom.purple.light },
     WhichKeySeperator = { fg = c.comment },
     WhichKeySeparator = { fg = c.comment },
     WhichKeyFloat = { bg = c.bg_sidebar },
