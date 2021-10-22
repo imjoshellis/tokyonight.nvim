@@ -1,4 +1,4 @@
-A _heavily_ customized tokyonight theme because I'm not ready to write my own theme from scratch. Forked from https://github.com/folke/tokyonight.nvim
+A _heavily_ customized tokyonight theme because I'm really picky, but not ready to write my own theme from scratch. Forked from https://github.com/folke/tokyonight.nvim
 
 # 🏙 Tokyo Night
 
