@@ -231,7 +231,7 @@ function M.setup(config)
     TSNamespace            = { fg = c.custom.gray.dark };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
-    TSOperator             = { fg = c.custom.gray.dark }, -- For any operator: `+`, but also `->` and `*` in C.
+    TSOperator             = { fg = c.custom.yellow.dark }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter            = { fg = c.custom.yellow.light }, -- For parameters of a function.
     TSParameterReference   = { fg = "#ff0000" };    -- For references to parameters of a function.
     TSField                = { fg = c.custom.blue.light }, -- For fields
