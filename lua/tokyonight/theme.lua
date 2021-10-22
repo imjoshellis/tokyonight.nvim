@@ -83,21 +83,21 @@ function M.setup(config)
     -- Uncomment and edit if you want more specific syntax highlighting.
 
     Constant = { fg = c.orange }, -- (preferred) any constant
-    String = { fg = c.green }, --   a string constant: "this is a string"
-    Character = { fg = c.green }, --  a character constant: 'c', '\n'
-    -- Number        = { }, --   a number constant: 234, 0xff
-    -- Boolean       = { }, --  a boolean constant: TRUE, false
+    String = { fg = c.custom.strings }, --   a string constant: "this is a string"
+    Character = { fg = c.custom.numbers }, --  a character constant: 'c', '\n'
+    Number        = { fg = c.custom.numbers }, --   a number constant: 234, 0xff
+    Boolean       = { fg = c.custom.green.light }, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
 
-    Identifier = { fg = c.magenta, style = config.variableStyle }, -- (preferred) any variable name
-    Function = { fg = c.blue, style = config.functionStyle }, -- function name (also: methods for classes)
+    Identifier = { fg = c.custom.purple.light, style = config.variableStyle }, -- (preferred) any variable name
+    Function = { fg = c.custom.functions, style = config.functionStyle }, -- function name (also: methods for classes)
 
-    Statement = { fg = c.magenta }, -- (preferred) any statement
+    Statement = { fg = c.custom.blue.bright }, -- (preferred) any statement
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
-    Operator = { fg = c.blue5 }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = c.cyan, style = config.keywordStyle }, --  any other keyword
+    Operator = { fg = c.custom.gray.dark }, -- "sizeof", "+", "*", etc.
+    Keyword = { fg = c.custom.keywords, style = config.keywordStyle }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = { fg = c.cyan }, -- (preferred) generic Preprocessor
@@ -106,7 +106,7 @@ function M.setup(config)
     -- Macro         = { }, --    same as Define
     -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
 
-    Type = { fg = c.blue1 }, -- (preferred) int, long, char, etc.
+    Type = { fg = c.custom.purple.dark }, -- (preferred) int, long, char, etc.
     -- StorageClass  = { }, -- static, register, volatile, etc.
     -- Structure     = { }, --  struct, union, enum, etc.
     -- Typedef       = { }, --  A typedef
@@ -207,39 +207,39 @@ function M.setup(config)
 
     -- TSAnnotation        = { };    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
     -- TSAttribute         = { };    -- (unstable) TODO: docs
-    -- TSBoolean           = { };    -- For booleans.
+    TSBoolean           = { fg = c.custom.green.light };    -- For booleans.
     -- TSCharacter         = { };    -- For characters.
     -- TSComment           = { };    -- For comment blocks.
     TSNote = { fg = c.bg, bg = c.info },
     TSWarning = { fg = c.bg, bg = c.warning },
     TSDanger = { fg = c.bg, bg = c.error },
-    TSConstructor = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    TSConstructor = { fg = c.custom.gray.dark }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     -- TSConditional       = { };    -- For keywords related to conditionnals.
     -- TSConstant          = { };    -- For constants
     -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
     -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
     -- TSError             = { };    -- For syntax/parser errors.
     -- TSException         = { };    -- For exception related keywords.
-    TSField = { fg = c.green1 }, -- For fields.
+    TSField = { fg = c.custom.purple.light }, -- For fields.
     -- TSFloat             = { };    -- For floats.
     -- TSFunction          = { };    -- For function (calls and definitions).
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    TSKeyword = { fg = c.purple, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
-    TSKeywordFunction = { fg = c.magenta, style = config.functionStyle }, -- For keywords used to define a fuction.
-    TSLabel = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
+    TSKeyword = { fg = c.custom.keywords, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
+    TSKeywordFunction = { fg = c.custom.functions, style = config.functionStyle }, -- For keywords used to define a fuction.
+    TSLabel = { fg = c.custom.gray.dark }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
-    -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
+    TSNamespace         = { fg = c.custom.gray.dark };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
-    TSOperator = { fg = c.blue5 }, -- For any operator: `+`, but also `->` and `*` in C.
-    TSParameter = { fg = c.yellow }, -- For parameters of a function.
+    TSOperator = { fg = c.custom.yellow.dark }, -- For any operator: `+`, but also `->` and `*` in C.
+    TSParameter = { fg = c.custom.yellow.light }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
-    TSProperty = { fg = c.green1 }, -- Same as `TSField`.
-    TSPunctDelimiter = { fg = c.blue5 }, -- For delimiters ie: `.`
-    TSPunctBracket = { fg = c.fg_dark }, -- For brackets and parens.
-    TSPunctSpecial = { fg = c.blue5 }, -- For special punctutation that does not fall in the catagories before.
+    TSProperty = { fg = c.custom.purple.light }, -- Same as `TSField`.
+    TSPunctDelimiter = { fg = c.custom.gray.very_dark }, -- For delimiters ie: `.`
+    TSPunctBracket = { fg = c.custom.gray.dark }, -- For brackets and parens.
+    TSPunctSpecial = { fg = c.custom.gray.dark }, -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
     TSStringRegex = { fg = c.blue6 }, -- For regexes.
@@ -248,7 +248,7 @@ function M.setup(config)
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
     TSVariable = { style = config.variableStyle }, -- Any variable name that does not have another highlight.
-    TSVariableBuiltin = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
+    TSVariableBuiltin = { fg = c.custom.gray.very_dark }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     -- TSTag               = { };    -- Tags like html tag names.
     -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`

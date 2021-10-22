@@ -44,6 +44,40 @@ function M.setup(config)
     red1 = "#db4b4b",
     git = { change = "#6183bb", add = "#449dab", delete = "#914c54", conflict = "#bb7a61" },
     gitSigns = { add = "#164846", change = "#394b70", delete = "#823c41" },
+    custom = {
+      functions = "#7AA2F7",
+      keywords = "#4870CA",
+      numbers = "#3BA6B6",
+      strings = "#E1B062",
+      red = {
+        dark = "#87363E",
+        light = "#D7768E",
+      },
+      gray = {
+        very_dark = "#565A75",
+        dark = "#787B9A",
+        light = "#ACAFD1",
+      },
+      purple = {
+        dark = "#805FBB",
+        light = "#BB9AF7",
+      },
+      cyan = {
+        dark = "#3D8FBF",
+        light = "#ACAFD1",
+      },
+      blue = {
+        dark = "#4870CA",
+        light = "#7AA2F7",
+      },
+      yellow = {
+        dark = "#B18032",
+        light = "#E1B062",
+      },
+      green = {
+        light = "#3BA6B6",
+      },
+    },
   }
   if config.style == "night" or config.style == "day" or vim.o.background == "light" then
     colors.bg = "#1a1b26"
