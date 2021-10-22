@@ -15,7 +15,7 @@ function M.setup(config)
   local c = theme.colors
 
   theme.base = {
-    Comment = { fg = c.comment, style = config.commentStyle }, -- any comment
+    Comment = { fg = c.custom.gray.very_dark, style = config.commentStyle }, -- any comment
     ColorColumn = { bg = c.black }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.dark5 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = c.bg, bg = c.fg }, -- character under the cursor
@@ -209,12 +209,12 @@ function M.setup(config)
     -- TSAttribute         = { };    -- (unstable) TODO: docs
     TSBoolean           = { fg = c.custom.green.light };    -- For booleans.
     -- TSCharacter         = { };    -- For characters.
-    -- TSComment           = { };    -- For comment blocks.
+    TSComment           = { fg = c.custom.gray.very_dark };    -- For comment blocks.
     TSNote = { fg = c.bg, bg = c.info },
     TSWarning = { fg = c.bg, bg = c.warning },
     TSDanger = { fg = c.bg, bg = c.error },
-    TSConstructor = { fg = c.custom.gray.dark }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    -- TSConditional       = { };    -- For keywords related to conditionnals.
+    TSConstructor = { fg = c.custom.gray.light }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    TSConditional       = { fg = c.custom.blue.light };    -- For keywords related to conditionnals.
     -- TSConstant          = { };    -- For constants
     -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
     -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
@@ -225,33 +225,33 @@ function M.setup(config)
     -- TSFunction          = { };    -- For function (calls and definitions).
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-    -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    TSKeyword = { fg = c.custom.keywords, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
+    TSInclude           = { fg = c.custom.gray.very_dark };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+    TSKeyword = { fg = c.custom.purple.dark, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
     TSKeywordFunction = { fg = c.custom.functions, style = config.functionStyle }, -- For keywords used to define a fuction.
     TSLabel = { fg = c.custom.gray.dark }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     TSNamespace         = { fg = c.custom.gray.dark };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
-    TSOperator = { fg = c.custom.yellow.dark }, -- For any operator: `+`, but also `->` and `*` in C.
+    TSOperator = { fg = c.custom.gray.dark }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter = { fg = c.custom.yellow.light }, -- For parameters of a function.
-    -- TSParameterReference= { };    -- For references to parameters of a function.
-    TSProperty = { fg = c.custom.purple.light }, -- Same as `TSField`.
+    TSParameterReference= { fg = "#ff0000" };    -- For references to parameters of a function.
+    TSProperty = { fg = c.custom.yellow.light }, -- Same as `TSField`.
     TSPunctDelimiter = { fg = c.custom.gray.very_dark }, -- For delimiters ie: `.`
     TSPunctBracket = { fg = c.custom.gray.dark }, -- For brackets and parens.
-    TSPunctSpecial = { fg = c.custom.gray.dark }, -- For special punctutation that does not fall in the catagories before.
-    -- TSRepeat            = { };    -- For keywords related to loops.
+    TSPunctSpecial = { fg = c.custom.red.dark }, -- For special punctutation that does not fall in the catagories before.
+    TSRepeat            = { fg = c.custom.keywords };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
     TSStringRegex = { fg = c.blue6 }, -- For regexes.
     TSStringEscape = { fg = c.magenta }, -- For escape characters within a string.
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
-    -- TSType              = { };    -- For types.
+    TSType              = { fg = c.custom.gray.light };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
-    TSVariable = { style = config.variableStyle }, -- Any variable name that does not have another highlight.
+    TSVariable = { fg = c.custom.variables, style = config.variableStyle }, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = { fg = c.custom.gray.very_dark }, -- Variable names that are defined by the languages, like `this` or `self`.
 
-    -- TSTag               = { };    -- Tags like html tag names.
-    -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
+    TSTag               = { style = "bold" };    -- Tags like html tag names.
+    TSTagDelimiter      = { fg = c.custom.gray.dark };    -- Tag delimiter like `<` `>` `/`
     -- TSText              = { };    -- For strings considered text in a markup language.
     TSTextReference = { fg = c.teal },
     -- TSEmphasis          = { };    -- For text to be represented with emphasis.
