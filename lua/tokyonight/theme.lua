@@ -220,7 +220,6 @@ function M.setup(config)
     -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
     -- TSError             = { };    -- For syntax/parser errors.
     -- TSException         = { };    -- For exception related keywords.
-    -- TSField             = { fg = c.custom.purple.light }, -- For fields (same as TSProperty?)
     -- TSFloat             = { };    -- For floats.
     -- TSFunction          = { };    -- For function (calls and definitions).
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
@@ -236,6 +235,7 @@ function M.setup(config)
     TSOperator             = { fg = c.custom.gray.dark }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter            = { fg = c.custom.yellow.light }, -- For parameters of a function.
     TSParameterReference   = { fg = "#ff0000" };    -- For references to parameters of a function.
+    TSField                = { fg = c.custom.blue.light }, -- For fields 
     TSProperty             = { fg = c.custom.blue.light }, -- Same as `TSField`.
     TSPunctDelimiter       = { fg = c.custom.gray.very_dark }, -- For delimiters ie: `.`
     TSPunctBracket         = { fg = c.custom.gray.dark }, -- For brackets and parens.
