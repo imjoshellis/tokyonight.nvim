@@ -247,9 +247,9 @@ function M.setup(config)
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     TSType                 = { fg = c.custom.gray.dark };    -- For types.
     TSTypeBuiltin          = { fg = c.custom.green.light };    -- For builtin types.
-    TSVariable             = { fg = c.custom.purple.light, style = config.variableStyle }, -- Any variable name that does not have another highlight.
+    TSVariable             = { fg = c.custom.gray.light, style = config.variableStyle }, -- Any variable name that does not have another highlight.
     TSVariableBuiltin      = { fg = c.custom.gray.very_dark }, -- Variable names that are defined by the languages, like `this` or `self`.
-    TSTag                  = { fg = c.custom.gray.dark, style = "bold" };    -- Tags like html tag names.
+    TSTag                  = { fg = c.custom.purple.light, style = "bold" };    -- Tags like html tag names.
     TSTagDelimiter         = { fg = c.custom.gray.very_dark };    -- Tag delimiter like `<` `>` `/`
     TSTagAttribute         = { fg = c.custom.purple.dark };    -- Tag delimiter like `<` `>` `/`
     -- TSText              = { };    -- For strings considered text in a markup language.
