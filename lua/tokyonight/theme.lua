@@ -338,7 +338,7 @@ function M.setup(config)
 
     -- WhichKey
     WhichKey = { fg = c.custom.gray.light },
-    WhichKeyGroup = { fg = c.custom.purple.dark },
+    WhichKeyGroup = { fg = c.custom.blue.light },
     WhichKeyDesc = { fg = c.custom.purple.light },
     WhichKeySeperator = { fg = c.comment },
     WhichKeySeparator = { fg = c.comment },
