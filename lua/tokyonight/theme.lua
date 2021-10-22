@@ -234,9 +234,9 @@ function M.setup(config)
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
     TSOperator             = { fg = c.custom.gray.dark }, -- For any operator: `+`, but also `->` and `*` in C.
-    TSParameter            = { fg = c.custom.blue.light }, -- For parameters of a function.
+    TSParameter            = { fg = c.custom.yellow.light }, -- For parameters of a function.
     TSParameterReference   = { fg = "#ff0000" };    -- For references to parameters of a function.
-    TSProperty             = { fg = c.custom.yellow.light }, -- Same as `TSField`.
+    TSProperty             = { fg = c.custom.blue.light }, -- Same as `TSField`.
     TSPunctDelimiter       = { fg = c.custom.gray.very_dark }, -- For delimiters ie: `.`
     TSPunctBracket         = { fg = c.custom.gray.dark }, -- For brackets and parens.
     TSPunctSpecial         = { fg = c.custom.red.dark }, -- For special punctutation that does not fall in the catagories before.
