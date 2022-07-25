@@ -50,7 +50,7 @@ function M.setup(config)
     NormalNC = { fg = c.fg, bg = config.transparent and c.none or c.bg }, -- normal text in non-current windows
     NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in non-current windows
     NormalFloat = { fg = c.fg, bg = c.bg_float }, -- Normal text in floating windows.
-    FloatBorder = { fg = c.border_highlight },
+    FloatBorder = { fg = c.border_highlight, bg = c.bg_float },
     Pmenu = { bg = c.bg_popup, fg = c.fg }, -- Popup menu: normal item.
     PmenuSel = { bg = util.darken(c.fg_gutter, 0.8) }, -- Popup menu: selected item.
     PmenuSbar = { bg = util.lighten(c.bg_popup, 0.95) }, -- Popup menu: scrollbar.
@@ -303,7 +303,8 @@ function M.setup(config)
     GitSignsDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopeBorder = { fg = c.border_highlight },
+    TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float },
+    TelescopeNormal = { fg = c.fg, bg = c.bg_float },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
@@ -405,16 +406,57 @@ function M.setup(config)
     HopUnmatched = { fg = c.dark3 },
 
     LightspeedGreyWash = { fg = c.dark3 },
+    -- LightspeedCursor = { link = "Cursor" },
+    LightspeedLabel = { fg = c.magenta2, style = "bold,underline" },
+    LightspeedLabelDistant = { fg = c.green1, style = "bold,underline" },
+    LightspeedLabelDistantOverlapped = { fg = c.green2, style = "underline" },
+    LightspeedLabelOverlapped = { fg = c.magenta2, style = "underline" },
+    LightspeedMaskedChar = { fg = c.orange },
+    LightspeedOneCharMatch = { bg = c.magenta2, fg = c.fg, style = "bold" },
+    LightspeedPendingOpArea = { bg = c.magenta2, fg = c.fg },
+    LightspeedShortcut = { bg = c.magenta2, fg = c.fg, style = "bold,underline" },
+    -- LightspeedShortcutOverlapped = { link = "LightspeedShortcut" },
+    -- LightspeedUniqueChar = { link = "LightspeedUnlabeledMatch" },
+    LightspeedUnlabeledMatch = { fg = c.blue2, style = "bold" },
 
     -- Cmp
     CmpDocumentation = { fg = c.fg, bg = c.bg_float },
     CmpDocumentationBorder = { fg = c.border_highlight, bg = c.bg_float },
+
     CmpItemAbbr = { fg = c.fg, bg = c.none },
-    CmpItemAbbrDeprecated = { fg = c.fg_gutter, bg = c.none },
-    CmpItemAbbrMatch = { fg = c.green1, bg = c.none },
-    CmpItemAbbrMatchFuzzy = { fg = c.green1, bg = c.none },
-    CmpItemKind = { fg = c.teal, bg = c.none },
+    CmpItemAbbrDeprecated = { fg = c.fg_gutter, bg = c.none, style = "strikethrough" },
+    CmpItemAbbrMatch = { fg = c.blue1, bg = c.none },
+    CmpItemAbbrMatchFuzzy = { fg = c.blue1, bg = c.none },
+
+    CmpItemKindDefault = { fg = c.fg_dark, bg = c.none },
     CmpItemMenu = { fg = c.comment, bg = c.none },
+
+    CmpItemKindKeyword = { fg = c.cyan, bg = c.none },
+
+    CmpItemKindVariable = { fg = c.magenta, bg = c.none },
+    CmpItemKindConstant = { fg = c.magenta, bg = c.none },
+    CmpItemKindReference = { fg = c.magenta, bg = c.none },
+    CmpItemKindValue = { fg = c.magenta, bg = c.none },
+
+    CmpItemKindFunction = { fg = c.blue, bg = c.none },
+    CmpItemKindMethod = { fg = c.blue, bg = c.none },
+    CmpItemKindConstructor = { fg = c.blue, bg = c.none },
+
+    CmpItemKindClass = { fg = c.orange, bg = c.none },
+    CmpItemKindInterface = { fg = c.orange, bg = c.none },
+    CmpItemKindStruct = { fg = c.orange, bg = c.none },
+    CmpItemKindEvent = { fg = c.orange, bg = c.none },
+    CmpItemKindEnum = { fg = c.orange, bg = c.none },
+    CmpItemKindUnit = { fg = c.orange, bg = c.none },
+
+    CmpItemKindModule = { fg = c.yellow, bg = c.none },
+
+    CmpItemKindProperty = { fg = c.green1, bg = c.none },
+    CmpItemKindField = { fg = c.green1, bg = c.none },
+    CmpItemKindTypeParameter = { fg = c.green1, bg = c.none },
+    CmpItemKindEnumMember = { fg = c.green1, bg = c.none },
+    CmpItemKindOperator = { fg = c.green1, bg = c.none },
+    CmpItemKindSnippet = { fg = c.dark5, bg = c.none },
   }
 
   theme.defer = {}
